@@ -243,7 +243,8 @@ public extension Date {
         // However, a seemingly-equivalent method from NSBundle is: https://github.com/apple/swift-corelibs-foundation/blob/master/Foundation/NSBundle.swift
             return Bundle.main.localizedString(forKey: string, value: "", table: "DateTools")
         #else
-            return NSLocalizedString(string, tableName: "DateTools", bundle: Bundle.dateToolsBundle(), value: "", comment: "")
+            // return NSLocalizedString(string, tableName: "DateTools", bundle: Bundle.dateToolsBundle(), value: "", comment: "")
+            return string
         #endif
     }
     
